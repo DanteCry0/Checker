@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualização de Arquivos</title>
+    <link rel="stylesheet" href="css/visualizacao-arquivos.css"> <!-- CSS específico da aba -->
+</head>
+<body>
+    <h1>Visualização de Arquivos</h1>
+
+    <!-- Menu de navegação para as páginas -->
+    <div id="tabs">
+        <a href="index.html" class="tab-button">Verificação de Arte</a>
+        <a href="cordao.html" class="tab-button">Verificação de Cordão</a>
+        <a href="arquivos.html" class="tab-button">Visualizar Arquivos</a>
+    </div>
+
+    <!-- Conteúdo da aba de Visualização de Arquivos -->
+    <div id="arquivos" class="tab-content">
+        <h2>Visualização de Arquivos</h2>
+        <div id="file-upload">
+            <input type="file" id="fileInput" accept=".cdr,.psd,.ai">
+            <button id="view-file">Visualizar Arquivo</button>
+            <div id="file-display" style="margin-top:20px;">
+                <!-- Aqui o arquivo carregado será exibido -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/visualizacao-arquivos.js"></script> <!-- JS específico da aba -->
+</body>
+</html>
