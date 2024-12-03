@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Arte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Verifique sua Arte</h1>
+    <div id="layout">
+        <div id="canvas-container">
+            <canvas id="canvas" width="455" height="700"></canvas>
+        </div>
+        <div id="controls">
+            <!-- Box de legenda com quadradinhos -->
+            <div id="legend">
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #00FFFF;"></div>
+                    <span>Sangria</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #FF0000;"></div>
+                    <span>Corte</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #00FF00;"></div>
+                    <span>Segurança</span>
+                </div>
+            </div>
+
+            <!-- Caixa de Seleção para Tipos de Furos -->
+            <label for="holeType">Escolha o tipo de furo:</label>
+            <select id="holeType">
+                <option value="none">Nenhum furo</option>
+                <option value="ovalCenter">Ovoide Centralizado</option>
+                <option value="ovalDouble">Ovoide Duplo</option>
+                <option value="roundCenter">Redondo Centralizado</option>
+                <option value="roundDouble">Redondo Duplo</option>
+            </select>
+
+            <!-- Caixa de Seleção para Cor do Contorno -->
+            <label for="borderColor">Escolha a cor do contorno:</label>
+            <select id="borderColor">
+                <option value="black">Preto</option>
+                <option value="red">Vermelho</option>
+            </select>
+
+            <div id="buttons">
+                <input type="file" id="upload" accept="image/*">
+                <button id="delete-image">Excluir Imagem</button>
+                <button id="download-canvas">Baixar Imagem</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
