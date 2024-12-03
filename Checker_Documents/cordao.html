@@ -4,57 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verificação de Cordão</title>
-    <link rel="stylesheet" href="css/verificacao-cordao.css"> <!-- CSS específico da aba -->
+    <link rel="stylesheet" href="verificacao-cordao.css"> <!-- Novo CSS -->
 </head>
 <body>
-    <h1>Verificação de Cordão</h1>
+    <!-- Cabeçalho fixo -->
+    <header>
+        <nav>
+            <ul class="nav-buttons">
+                <li><a href="arte.html">Verificação de Arte</a></li>
+                <li><a href="cordao.html">Verificação de Cordão</a></li>
+                <li><a href="arquivos.html">Visualização de Arquivos</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Menu de navegação para as páginas -->
-    <div id="tabs">
-        <a href="arte.html" class="tab-button">Verificação de Arte</a>
-        <a href="cordao.html" class="tab-button">Verificação de Cordão</a>
-        <a href="arquivos.html" class="tab-button">Visualizar Arquivos</a>
-    </div>
+    <!-- Conteúdo principal -->
+    <main>
+        <h1>Verificação de Cordão</h1>
+        <div id="layout">
+            <div id="canvas-container">
+                <canvas id="canvas" width="10630" height="342"></canvas>
+            </div>
+            <div id="controls">
+                <div id="legend">
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: #00FFFF;"></div>
+                        <span>Sangria</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: #FF0000;"></div>
+                        <span>Corte</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: #00FF00;"></div>
+                        <span>Segurança</span>
+                    </div>
+                </div>
 
-    <!-- Conteúdo da aba de Verificação de Cordão -->
-    <div id="cordao" class="tab-content">
-        <h2>Verificação de Cordão</h2>
-        <div id="canvas-container">
-            <canvas id="canvas" width="10630" height="342"></canvas> <!-- Novo tamanho do canvas -->
-        </div>
-        <div id="controls">
-            <!-- Box de legenda com quadradinhos -->
-            <div id="legend">
-                <div class="legend-item">
-                    <div class="legend-color" style="background-color: #00FFFF;"></div>
-                    <span>Sangria</span>
-                </div>
-                <div class="legend-item">
-                    <div class="legend-color" style="background-color: #FF0000;"></div>
-                    <span>Corte</span>
-                </div>
-                <div class="legend-item">
-                    <div class="legend-color" style="background-color: #00FF00;"></div>
-                    <span>Segurança</span>
+                <div id="buttons">
+                    <input type="file" id="upload" accept="image/*">
+                    <button id="delete-image">Excluir Imagem</button>
+                    <button id="download-canvas">Baixar Imagem</button>
                 </div>
             </div>
-            <label for="holeType">Escolha o tipo de furo:</label>
-            <select id="holeType" disabled>
-                <option value="none">Nenhum furo</option>
-            </select>
-            <label for="borderColor">Escolha a cor do contorno:</label>
-            <select id="borderColor">
-                <option value="black">Preto</option>
-                <option value="red">Vermelho</option>
-            </select>
-            <div id="buttons">
-                <input type="file" id="upload" accept="image/*">
-                <button id="delete-image">Excluir Imagem</button>
-                <button id="download-canvas">Baixar Imagem</button>
-            </div>
         </div>
-    </div>
-
-    <script src="js/verificacao-cordao.js"></script> <!-- JS específico da aba -->
+    </main>
+    <script src="cordao-script.js"></script> <!-- Script atualizado -->
 </body>
 </html>

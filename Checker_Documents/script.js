@@ -9,28 +9,40 @@ let borderColor = 'black'; // Cor padrão
 canvas.width = 455;
 canvas.height = 700;
 
-// Função para desenhar as marcas de sangria, corte e segurança com bordas arredondadas
+// Função para desenhar um retângulo com cantos arredondados
+function desenharRetanguloArredondado(ctx, x, y, width, height, radius) {
+    ctx.beginPath();
+    ctx.moveTo(x + radius, y); // Começa no canto superior esquerdo
+    ctx.lineTo(x + width - radius, y); // Linha para o canto superior direito
+    ctx.arcTo(x + width, y, x + width, y + radius, radius); // Canto superior direito
+    ctx.lineTo(x + width, y + height - radius); // Linha para o canto inferior direito
+    ctx.arcTo(x + width, y + height, x + width - radius, y + height, radius); // Canto inferior direito
+    ctx.lineTo(x + radius, y + height); // Linha para o canto inferior esquerdo
+    ctx.arcTo(x, y + height, x, y + height - radius, radius); // Canto inferior esquerdo
+    ctx.lineTo(x, y + radius); // Linha para o canto superior esquerdo
+    ctx.arcTo(x, y, x + radius, y, radius); // Canto superior esquerdo
+    ctx.closePath(); // Fecha o caminho
+    ctx.stroke(); // Desenha o contorno
+}
+
+// Função para desenhar as marcas de sangria, corte e segurança com cantos arredondados
 function desenharMarcas() {
-    // Cor de sangria (cyan) - 455x700px
-    ctx.strokeStyle = '#00FFFF'; // Ciano
-    ctx.lineWidth = 3;
-    ctx.lineJoin = 'round'; // Bordas arredondadas
-    ctx.lineCap = 'round';  // Extremidades arredondadas
-    ctx.strokeRect(0, 0, 455, 700); // Marca de sangria
+    const radius = 10; // Define o raio dos cantos arredondados
 
-    // Cor de corte (vermelho) - 432x672px
-    ctx.strokeStyle = '#FF0000'; // Vermelho
+    // Sangria (Ciano)
+    ctx.strokeStyle = '#00FFFF';
     ctx.lineWidth = 3;
-    ctx.lineJoin = 'round'; // Bordas arredondadas
-    ctx.lineCap = 'round';  // Extremidades arredondadas
-    ctx.strokeRect(11.5, 14, 432, 672); // Marca de corte (deslocada para o centro)
+    desenharRetanguloArredondado(ctx, 0, 0, 455, 700, radius);
 
-    // Cor de segurança (verde) - 404x629px
-    ctx.strokeStyle = '#00FF00'; // Verde
+    // Corte (Vermelho)
+    ctx.strokeStyle = '#FF0000';
     ctx.lineWidth = 3;
-    ctx.lineJoin = 'round'; // Bordas arredondadas
-    ctx.lineCap = 'round';  // Extremidades arredondadas
-    ctx.strokeRect(23, 34, 404, 629); // Marca de segurança (deslocada para o centro)
+    desenharRetanguloArredondado(ctx, 11.5, 14, 432, 672, radius);
+
+    // Segurança (Verde)
+    ctx.strokeStyle = '#00FF00';
+    ctx.lineWidth = 3;
+    desenharRetanguloArredondado(ctx, 23, 34, 404, 629, radius);
 }
 
 // Função para desenhar furos no canvas com base na escolha
@@ -127,9 +139,10 @@ document.getElementById('borderColor').addEventListener('change', function(e) {
 // Botão para excluir a imagem carregada
 document.getElementById('delete-image').addEventListener('click', function() {
     ctx.clearRect(0, 0, canvas.width, canvas.height); // Limpa o canvas
+    uploadedImage = new Image(); // Reseta a imagem carregada
     desenharMarcas(); // Redesenha as marcas de sangria, corte e segurança
-    desenharFuro('none'); // Remove qualquer furo desenhado
 });
+
 
 // Botão para baixar o canvas como imagem
 document.getElementById('download-canvas').addEventListener('click', function() {
