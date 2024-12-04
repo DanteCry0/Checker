@@ -29,7 +29,7 @@ Esse projeto é uma **Work in Progress (WIP)**, e novas funcionalidades estão s
 - [x] **Adição da Função de Furo**: Implementação para verificar os diferentes tipos de furos em layouts de crachás (WIP).  
 - [x] **Criação da Verificação de Cordão**: Adaptação do canvas para os tamanhos e especificações de cordões, removendo funções irrelevantes.  
 - [x] **Visualização de Arquivos**: Suporte para arquivos `.cdr`, `.psd` e `.ai` para verificação rápida.  
-- [ ] **Implementação do Cabeçalho**: Ajustar o layout para incluir o cabeçalho sem afetar a estrutura existente.  
+- [x] **Implementação do Cabeçalho**: Ajustar o layout para incluir o cabeçalho sem afetar a estrutura existente.  
 - [ ] **Testes de Usabilidade**: Garantir que todas as funcionalidades atendam às necessidades do usuário final.  
 - [ ] **Publicação e Documentação**: Disponibilizar o projeto no GitHub com um README completo e instruções de uso.  
 - [ ] **Feedback e Iteração**: Receber feedback dos usuários e adicionar melhorias contínuas.  
