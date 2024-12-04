@@ -4,17 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checker</title>
-    <!-- Adicionar os arquivos CSS da pasta Checker_Documents -->
-    <link rel="stylesheet" href="Checker_Documents/style.css">
-    <link rel="stylesheet" href="Checker_Documents/verificacao-cordao.css">
-    <link rel="stylesheet" href="Checker_Documents/visualizacao-arquivos.css">
+    <link rel="stylesheet" href="index-style.css"> <!-- Novo CSS -->
 </head>
 <body>
-
     <!-- Cabeçalho fixo -->
     <header>
         <nav>
-            <ul>
+            <ul class="nav-buttons">
                 <li><a href="Checker_Documents/Arte.html">Verificação de Arte</a></li>
                 <li><a href="Checker_Documents/cordao.html">Verificação de Cordão</a></li>
                 <li><a href="Checker_Documents/arquivo.html">Visualização de Arquivos</a></li>
@@ -22,18 +18,31 @@
         </nav>
     </header>
 
+    <!-- Conteúdo principal -->
     <main>
-        <h1>Bem-vindo ao Checker!</h1>
-        <!-- O conteúdo do site será exibido aqui -->
+        <h1>Bem-vindo ao Checker</h1>
         <div id="content">
-            <!-- O conteúdo das páginas será carregado aqui -->
+            <!-- Cartão 1 -->
+            <div class="card">
+                <h2>Verificação de Arte</h2>
+                <p>Faça a análise e ajuste de artes para garantir que atendem aos padrões.</p>
+                <a href="Checker_Documents/Arte.html">Acessar</a>
+            </div>
+
+            <!-- Cartão 2 -->
+            <div class="card">
+                <h2>Verificação de Cordão</h2>
+                <p>Verifique e ajuste layouts de cordões com precisão.</p>
+                <a href="Checker_Documents/cordao.html">Acessar</a>
+            </div>
+
+            <!-- Cartão 3 -->
+            <div class="card">
+                <h2>Visualização de Arquivos</h2>
+                <p>Visualize e converta arquivos de diversos formatos em alta qualidade.</p>
+                <a href="Checker_Documents/arquivo.html">Acessar</a>
+            </div>
         </div>
     </main>
-
-    <!-- Scripts -->
-    <script src="Checker_Documents/script.js"></script>
-    <script src="Checker_Documents/verificacao-cordao.js"></script>
-    <script src="Checker_Documents/visualizacao-arquivos.js"></script>
-
 </body>
 </html>
