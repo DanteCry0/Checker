@@ -78,8 +78,8 @@ h1 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
-    width: 455px;
-    height: 700px;
+    width: 456px;
+    height: 700px; 
     display: flex;
     justify-content: center;
     align-items: center;
